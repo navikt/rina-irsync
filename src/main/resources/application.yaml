@@ -1,0 +1,19 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: rina-irsync
+  threads:
+    virtual:
+      enabled: true
+
+  shell:
+    interactive:
+      enabled: true
+
+#logging:
+#  level:
+#    root: OFF
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} : %m%n"

@@ -1,0 +1,14 @@
+{
+  "type": "SYN002",
+  "typeVersion": "4.2",
+  "initialDocument": {
+    "SYN002": {
+      "sedPackage": "SystemComponents/SystemContext/SYN002",
+      "sedGVer": "4",
+      "sedVer": "2",
+      "RequestForIRSync": {
+        "currentVersion": "3.0.114886"
+      }
+    }
+  }
+}

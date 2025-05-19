@@ -1,0 +1,36 @@
+[
+  {
+    "name": "no.nav.ten.rina.resources.Resource",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "no.nav.ten.rina.ir.IRInitialDocumentWrapper",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true
+  },
+  {
+    "name": "no.nav.ten.rina.ir.Syn002",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true
+  },
+  {
+    "name": "no.nav.ten.rina.ir.RequestForIRSync",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "no.nav.ten.rina.ir.InitialDocument",
+    "allDeclaredConstructors": true,
+    "allDeclaredFields": true
+  }
+]
