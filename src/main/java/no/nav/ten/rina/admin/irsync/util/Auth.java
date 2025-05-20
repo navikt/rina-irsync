@@ -38,7 +38,10 @@ public class Auth {
               .getHeaders()
               .getLocation()
               .toString();
-      if (casTgtHttps) stUrl = stUrl.replace("http", "https");
+      if (casTgtHttps) {
+        log.info("CAS TGT HTTP scheme is set to HTTPS");
+        stUrl = stUrl.replace("http", "https");
+      }
 
       log.debug("Retrieving ST from CAS");
       var serviceTicket = RestClient.builder().baseUrl(stUrl).build()
