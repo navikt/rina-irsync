@@ -20,6 +20,8 @@ public class Auth {
   String cpiUsername;
   @Value("${CPI_PASSWORD}")
   String cpiPassword;
+  @Value("${CAS_TGT_HTTPS}")
+  boolean casTgtHttps;
 
   String xauthCookie, jsessionId;
 
@@ -35,8 +37,8 @@ public class Auth {
               .toEntity(String.class)
               .getHeaders()
               .getLocation()
-              .toString()
-              .replace("http", "https");
+              .toString();
+      if (casTgtHttps) stUrl = stUrl.replace("http", "https");
 
       log.debug("Retrieving ST from CAS");
       var serviceTicket = RestClient.builder().baseUrl(stUrl).build()

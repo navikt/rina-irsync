@@ -51,14 +51,14 @@ CPI_USERNAME=whoisit
 CPI_PASSWORD=NotMe567
 ```
 
-## Running on Linux, Windows, Mac
+## Running on Linux, Windows
 
-We release native apps for Ununtu (x64), Windows (x64) and Mac (Apple Silicon). You can download the latest release from the [releases page].
+We release native apps for Ununtu (x64), Windows (x64). You can download the latest release from the [releases page].
 
-We only test Windows and Mac. If the Ubuntu version does not work, please file an issue.
+We only test Windows. If the Ubuntu version does not work, please file an issue.
 
 
 
 ## Notes
 
-This app requires the HTTPS scheme to be used for the CPI URL.
+We don't need notes...
