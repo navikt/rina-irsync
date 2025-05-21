@@ -10,6 +10,8 @@ spring:
   shell:
     interactive:
       enabled: true
+    history:
+      enabled: false
 
 #logging:
 #  level:
