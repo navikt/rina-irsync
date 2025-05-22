@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.5</version>
+        <version>3.4.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>no.nav.ten.rina.admin</groupId>
     <artifactId>irsync</artifactId>
-    <version>1.2.1-RELEASE</version>
+    <version>1.2.2-RELEASE</version>
     <name>rina-irsync</name>
     <description>12 factor app to sync IR in RINA 2024</description>
     <url>https://github.com/torstenk/rina-irsync</url>
