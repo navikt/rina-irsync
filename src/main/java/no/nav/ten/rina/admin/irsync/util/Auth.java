@@ -38,7 +38,8 @@ public class Auth {
               .getHeaders()
               .getLocation()
               .toString();
-      if (Boolean.TRUE.equals(casTgtHttps)) {
+      if (Boolean.TRUE.equals(casTgtHttps)) { // null safe
+        // This is a workaround for Nav's CAS implementation requiring CAS TGT URL to be HTTPS regardless
         log.debug("CAS TGT HTTP scheme is set to HTTPS");
         stUrl = stUrl.replace("http", "https");
       }

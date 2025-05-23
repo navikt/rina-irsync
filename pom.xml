@@ -10,10 +10,10 @@
     </parent>
     <groupId>no.nav.ten.rina.admin</groupId>
     <artifactId>irsync</artifactId>
-    <version>1.2.4-RELEASE</version>
+    <version>1.2.5-SNAPSHOT</version>
     <name>rina-irsync</name>
     <description>12 factor app to sync IR in RINA 2024</description>
-    <url>https://github.com/torstenk/rina-irsync</url>
+    <url>https://github.com/navikt/rina-irsync</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -34,9 +34,9 @@
         </developer>
     </developers>
     <scm>
-        <connection>scm:git:git://github.com/torstenk/rina-irsync.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:torstenk/rina-irsync.git</developerConnection>
-        <url>https://github.com/torstenk/rina-irsync</url>
+        <connection>scm:git:git://github.com/navikt/rina-irsync.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:navikt/rina-irsync.git</developerConnection>
+        <url>https://github.com/navikt/rina-irsync</url>
         <tag>HEAD</tag>
     </scm>
     <properties>
