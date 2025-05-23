@@ -39,7 +39,7 @@ public class Auth {
               .getLocation()
               .toString();
       if (Boolean.TRUE.equals(casTgtHttps)) {
-        log.info("CAS TGT HTTP scheme is set to HTTPS");
+        log.debug("CAS TGT HTTP scheme is set to HTTPS");
         stUrl = stUrl.replace("http", "https");
       }
 

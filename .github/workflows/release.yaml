@@ -48,7 +48,7 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
-        run: ./mvnw -Pnative native:compile -DskipTests=true -Dnative.buildtools.sbom.enabled=true -Dnative.pgo.enabled=true -Dnative.image.strict-image-heap=true -Dnative.image.heap.max=8G -Dnative.image.compiler.march=native -Dnative.image.quick-build=true
+        run: ./mvnw -Pnative native:compile -DskipTests=true -Dnative.buildtools.sbom.enabled=true -Dnative.pgo.enabled=true -Dnative.image.strict-image-heap=true -Dnative.image.heap.max=8G -Dnative.image.compiler.march=native -Dnative.image.quick-build=true -Dnative.image.enable-sbom=true -Dnative.image.pgo=true -Dnative.image.heap.max=8G -Dnative.image.compiler.quick-build=true
         shell: bash
 
       - name: Copy Binary (Unix)
