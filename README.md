@@ -2,6 +2,10 @@
 
 App that allows us to autmate IR SYNC in RINA.
 
+## Contributors
+
+See the list of [contributors](CONTRIBUTORS.md) who have helped make this project better.
+
 ## Description
 
 This 12-factor app supports two scenarios:
@@ -43,6 +47,8 @@ Locally, we use `.env` to accomplish the same.
 # Two URLs for CAS and CPI only for historicalreasons internal to Nav.
 # Everywhere else, both have usually the same value.
 CAS_URL=https://rina-09.empl.dg.ec.eu
+# Set this to true if you need the TGT request to use HTTPS regardless, like Nav
+CAS_TGT_HTTPS=false
 CPI_URL=https://rina-09.empl.dg.ec.eu
 CAS_SERVICE_ID=../portal_new/cas/cpi
 
@@ -56,8 +62,6 @@ CPI_PASSWORD=NotMe567
 We release native apps for Ununtu (x64), Windows (x64). You can download the latest release from the [releases page].
 
 We only test Windows. If the Ubuntu version does not work, please file an issue.
-
-
 
 ## Notes
 
