@@ -129,20 +129,29 @@ jobs:
           gpgconf --kill gpg-agent
           
           # Import private key
+          echo "Importing GPG private key..."
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
           
           # Non-interactive trust command (no tty needed)
+          echo "Trusting GPG key..."
           echo -e "${{ secrets.GPG_KEY_ID }}:6:" | gpg --import-ownertrust
           
           # Verify import
+          echo "Listing GPG keys..."
           gpg --list-secret-keys --keyid-format LONG
 
       - name: Sign checksums
         run: |
+          echo "Signing checksums with GPG..."
           printf '%s\n' "${{ secrets.GPG_PASSPHRASE }}" | \
           gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback \
             --detach-sign --armor --output checksums.txt.sig checksums.txt
+          
+          echo "Checksums and signature created:"
           ls -la checksums.txt*  # Verify files exist
+          
+          # Verify the signature
+          echo "Verifying signature..."
           gpg --verify checksums.txt.sig checksums.txt
 
       - name: Create Release
