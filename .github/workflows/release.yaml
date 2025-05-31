@@ -131,7 +131,8 @@ jobs:
 
       - name: Sign checksums
         run: |
-          echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback \
+          printf '%s\n' "${{ secrets.GPG_PASSPHRASE }}" | \
+          gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback \
             --detach-sign --armor --output checksums.txt.sig checksums.txt
           ls -la checksums.txt*  # Verify files exist
           gpg --verify checksums.txt.sig checksums.txt
