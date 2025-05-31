@@ -114,8 +114,8 @@ jobs:
         shell: bash
         run: |
           # Generate checksums for all binaries
-          sha256sum ./artifacts/irsync-linux-x64/irsync-linux-x64 ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe > checksums.txt
-          # Print for debugging (optional)
+          sha256sum ./artifacts/*/irsync-* | sed 's|.*/||' > checksums.txt
+          # Print for debugging
           cat checksums.txt
 
       - name: Create Release
