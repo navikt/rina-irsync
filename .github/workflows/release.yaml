@@ -122,6 +122,9 @@ jobs:
           
       - name: Import GPG Key
         run: |
+          # Create GPG directory and set permissions
+          mkdir -p ~/.gnupg
+          chmod 700 ~/.gnupg
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
           # Trust the key
           echo "6:6" | gpg --import-ownertrust
