@@ -115,7 +115,7 @@ jobs:
         run: |
           # Generate checksums for all binaries
           sha256sum ./artifacts/*/irsync-* | while read -r checksum file; do
-            echo "$checksum  $(basename "$file")"
+            echo "$checksum  ${file##*/}"
           done > checksums.txt
           # Print for debugging
           cat checksums.txt
