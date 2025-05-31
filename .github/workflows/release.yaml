@@ -114,7 +114,9 @@ jobs:
         shell: bash
         run: |
           # Generate checksums for all binaries
-          sha256sum ./artifacts/*/irsync-* | awk '{print $1 "  " $2}' | sed 's|.*/||' > checksums.txt
+          sha256sum ./artifacts/*/irsync-* | while read -r checksum file; do
+            echo "$checksum  $(basename "$file")"
+          done > checksums.txt
           # Print for debugging
           cat checksums.txt
 
