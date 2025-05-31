@@ -16,8 +16,8 @@ spring:
 
 logging:
   level:
-    org.jline: OFF          # Completely disable JLine logs
-    org.springframework.shell: INFO  # Keep Spring Shell logs visible
+    org.jline: OFF
+    org.springframework.shell: INFO
     org.springframework.boot.SpringApplication: ERROR
     org.springframework.boot.context.config: ERROR
   pattern:
