@@ -110,6 +110,14 @@ jobs:
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
         shell: bash
 
+      - name: Generate SHA-256 checksums
+        shell: bash
+        run: |
+          # Generate checksums for all binaries
+          sha256sum ./artifacts/irsync-linux-x64/irsync-linux-x64 ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe > checksums.txt
+          # Print for debugging (optional)
+          cat checksums.txt
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
@@ -121,21 +129,22 @@ jobs:
           files: |
             ./artifacts/irsync-linux-x64/irsync-linux-x64
             ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
+            checksums.txt
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate checksums.txt
-        uses: dev-drprasad/hash-files@v1
-        with:
-          algorithm: sha256
-          files: |
-            ./artifacts/irsync-linux-x64/irsync-linux-x64
-            ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
-          output_file: checksums.txt
-
-      - name: Update Release Notes with Checksums
-        run: |
-          CHECKSUMS=$(cat checksums.txt)
-          gh release edit ${{ github.ref }} --notes "$CHECKSUMS"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Generate SHA-256 checksums
+#        uses: actions/hashfiles@v3
+#        with:
+#          algorithm: sha256
+#          files: |
+#            ./artifacts/irsync-linux-x64/irsync-linux-x64
+#            ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
+#          outputFile: checksums.txt
+#
+#      - name: Update Release Notes with Checksums
+#        run: |
+#          CHECKSUMS=$(cat checksums.txt)
+#          gh release edit ${{ github.ref }} --notes "$CHECKSUMS"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
