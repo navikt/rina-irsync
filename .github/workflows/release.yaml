@@ -125,9 +125,12 @@ jobs:
           # Create GPG directory and set permissions
           mkdir -p ~/.gnupg
           chmod 700 ~/.gnupg
+          
+          # Import private key
           echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
-          # Trust the key
-          echo "6:6" | gpg --import-ownertrust
+          
+          # Configure trust (no prompt)
+          echo -e "trust\n5\ny\n" | gpg --command-fd 0 --edit-key "${{ secrets.GPG_KEY_ID }}"
 
       - name: Sign checksums
         run: |
