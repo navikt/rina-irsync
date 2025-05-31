@@ -119,6 +119,19 @@ jobs:
           done > checksums.txt
           # Print for debugging
           cat checksums.txt
+          
+      - name: Import GPG Key
+        run: |
+          # Import private key
+          echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --batch --import
+          # Unlock the key (if passphrase exists)
+          echo "${{ secrets.GPG_PASSPHRASE }}" | gpg --batch --passphrase-fd 0 --pinentry-mode loopback --list-secret-keys
+
+      - name: Sign checksums.txt
+        run: |
+          gpg --detach-sign --armor --output checksums.txt.sig checksums.txt
+          # Verify (optional)
+          gpg --verify checksums.txt.sig checksums.txt
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -132,6 +145,7 @@ jobs:
             ./artifacts/irsync-linux-x64/irsync-linux-x64
             ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
             checksums.txt
+            checksums.txt.sig
           body: |
             ### Changelog
             ${{ steps.git-log.outputs.commit_history }}
