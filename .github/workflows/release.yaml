@@ -130,21 +130,8 @@ jobs:
             ./artifacts/irsync-linux-x64/irsync-linux-x64
             ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
             checksums.txt
+          body: |
+            ### Changelog
+            ${{ steps.git-log.outputs.commit_history }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-#      - name: Generate SHA-256 checksums
-#        uses: actions/hashfiles@v3
-#        with:
-#          algorithm: sha256
-#          files: |
-#            ./artifacts/irsync-linux-x64/irsync-linux-x64
-#            ./artifacts/irsync-windows-x64.exe/irsync-windows-x64.exe
-#          outputFile: checksums.txt
-#
-#      - name: Update Release Notes with Checksums
-#        run: |
-#          CHECKSUMS=$(cat checksums.txt)
-#          gh release edit ${{ github.ref }} --notes "$CHECKSUMS"
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

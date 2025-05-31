@@ -23,4 +23,4 @@ if not "%1"=="install" if not "%1"=="order" (
 )
 
 :: Run the executable with the provided option and append output
-irsync-windows-x64-1.2.4.exe %1 >> irsync.log 2>&1
+irsync-windows-x64-1.2.5.exe %1 >> irsync.log 2>&1
