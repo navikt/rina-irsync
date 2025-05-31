@@ -15,10 +15,10 @@ spring:
       enabled: false
 
 logging:
-#  level:
-#    org.jline: OFF          # Completely disable JLine logs
-#    org.springframework.shell: INFO  # Keep Spring Shell logs visible
-#    org.springframework.boot.SpringApplication: ERROR
-#    org.springframework.boot.context.config: ERROR
+  level:
+    org.jline: OFF          # Completely disable JLine logs
+    org.springframework.shell: INFO  # Keep Spring Shell logs visible
+    org.springframework.boot.SpringApplication: ERROR
+    org.springframework.boot.context.config: ERROR
   pattern:
     console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} : %m%n"
