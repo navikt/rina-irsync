@@ -1,6 +1,7 @@
 spring:
   main:
     banner-mode: off
+    log-startup-info: false
   application:
     name: rina-irsync
   threads:
@@ -13,9 +14,6 @@ spring:
     history:
       enabled: false
 
-#logging:
-#  level:
-#    root: OFF
 logging:
   pattern:
     console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} : %m%n"
