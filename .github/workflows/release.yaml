@@ -1,5 +1,9 @@
 name: Build Native Images and Release
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   push:
     tags:
