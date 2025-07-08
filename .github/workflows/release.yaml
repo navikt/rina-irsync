@@ -16,6 +16,23 @@ on:
         default: '1.0.0'
 
 jobs:
+  analyze:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: java
+          build-mode: manual
+          dependency-caching: true
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:java"
+
   build-native:
     name: Build Native Image - ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
