@@ -6,6 +6,17 @@ App that allows us to autmate IR SYNC in RINA.
 
 See the list of [contributors](CONTRIBUTORS.md) who have helped make this project better.
 
+
+## Goals
+
+- modern tech stack, JDK 21+
+- no "RINA SDK", generate data classes ourselves
+- binary releases for Linux and Windows
+
+## Non-Goals
+
+- Credentials management is out of scope. We assume the user has a way to securely store and retrieve username and password for an authorized user and make them available to the app as environment variables.
+
 ## Description
 
 This 12-factor app supports two scenarios:
@@ -66,3 +77,7 @@ We only test Windows. If the Ubuntu version does not work, please file an issue.
 ## Notes
 
 We don't need notes...
+
+# TODO
+
+- [ ] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
