@@ -74,10 +74,7 @@ We release native apps for Ununtu (x64), Windows (x64). You can download the lat
 
 We only test Windows. If the Ubuntu version does not work, please file an issue.
 
-## Notes
-
-We don't need notes...
-
 # TODO
 
 - [ ] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
+- [ ] proper semantic versioning using [Conventional Commits](https://www.conventionalcommits.org)
