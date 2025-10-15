@@ -76,5 +76,5 @@ We only test Windows. If the Ubuntu version does not work, please file an issue.
 
 # TODO
 
-- [ ] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
+- [ ] [Issue #10] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
 - [ ] proper semantic versioning using [Conventional Commits](https://www.conventionalcommits.org)
