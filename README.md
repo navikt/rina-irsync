@@ -77,4 +77,4 @@ We only test Windows. If the Ubuntu version does not work, please file an issue.
 # TODO
 
 - [ ] [Issue #10] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
-- [ ] proper semantic versioning using [Conventional Commits](https://www.conventionalcommits.org)
+- [ ] proper semantic release versioning using [Conventional Commits](https://www.conventionalcommits.org)
