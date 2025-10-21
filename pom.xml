@@ -46,6 +46,7 @@
         <semver4j.version>6.0.0</semver4j.version>
         <jsonschema2pojo.version>1.2.2</jsonschema2pojo.version>
         <lombok.version>1.18.42</lombok.version>
+        <logback.version>1.5.20</logback.version>
     </properties>
     <dependencies>
         <dependency>
@@ -112,12 +113,12 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.19</version>
+                <version>${logback.version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>1.5.19</version>
+                <version>${logback.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
