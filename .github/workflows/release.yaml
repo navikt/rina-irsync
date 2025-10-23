@@ -45,6 +45,7 @@ jobs:
           category: "/language:java"
 
   build-native:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     name: Build Native Image - ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     needs: release-please
