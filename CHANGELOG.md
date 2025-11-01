@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/navikt/rina-irsync/compare/v1.3.1...v1.3.2) (2025-11-01)
+
+
+### Bug Fixes
+
+* **gha:** only build on PR merge ([bc03c6f](https://github.com/navikt/rina-irsync/commit/bc03c6fe604b46fe65629d48f1fe1b55dc9c884f))
+
 ## [1.3.1](https://github.com/navikt/rina-irsync/compare/v1.3.1-SNAPSHOT...v1.3.1) (2025-10-23)
 
 
