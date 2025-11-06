@@ -1,6 +1,7 @@
 name: Build Native Images and Release
 
 permissions:
+  security-events: read
   packages: write
   contents: write
   issues: write
@@ -143,6 +144,7 @@ jobs:
             VERSION=${{ github.event.inputs.version }}
           fi
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          echo "VERSION=${VERSION}"
         shell: bash
 
       - name: Generate SHA-256 checksums
