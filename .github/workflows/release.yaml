@@ -98,6 +98,13 @@ jobs:
             -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native"
         shell: bash
 
+      - name: Determine version from tag
+        id: get_version
+        run: |
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          echo "VERSION=${VERSION}"
+        shell: bash
 
       - name: Copy Binary (Unix)
         if: runner.os != 'Windows'
@@ -142,19 +149,19 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Fetch tags
-        run: git fetch --tags
-
-      - name: Determine version from tag
-        id: get_version
-        run: |
-          VERSION=$(git describe --tags --abbrev=0)
-          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
-          echo "VERSION=${VERSION}"
-        shell: bash
+#      - name: Checkout repository
+#        uses: actions/checkout@v4
+#
+#      - name: Fetch tags
+#        run: git fetch --tags
+#
+#      - name: Determine version from tag
+#        id: get_version
+#        run: |
+#          VERSION=$(git describe --tags --abbrev=0)
+#          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+#          echo "VERSION=${VERSION}"
+#        shell: bash
 
       - name: Download all artifacts
         uses: actions/download-artifact@v4
@@ -208,8 +215,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release v${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ github.event_name == 'push' && github.ref || format('v{0}', github.event.inputs.version) }}
+          name: Release ${{ steps.get_version.outputs.VERSION }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
           draft: false
           prerelease: false
           generate_release_notes: true
