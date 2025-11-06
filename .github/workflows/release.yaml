@@ -29,6 +29,8 @@ jobs:
   analyze:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
+    permissions:
+      security-events: read
 
     steps:
       - name: Initialize CodeQL
