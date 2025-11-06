@@ -84,8 +84,20 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
-        run: ./mvnw -Pnative native:compile -DskipTests=true -Dnative.buildtools.sbom.enabled=true -Dnative.pgo.enabled=true -Dnative.image.strict-image-heap=true -Dnative.image.heap.max=8G -Dnative.image.compiler.march=native -Dnative.image.quick-build=true -Dnative.image.enable-sbom=true -Dnative.image.pgo=true -Dnative.image.heap.max=8G -Dnative.image.compiler.quick-build=true
+        run: |
+          ./mvnw -Pnative native:compile \
+            -DskipTests=true \
+            -Dnative.buildtools.sbom.enabled=true \
+            -Dnative.pgo.enabled=true \
+            -Dnative.image.strict-image-heap=true \
+            -Dnative.image.heap.max=8G \
+            -Dnative.image.compiler.march=native \
+            -Dnative.image.quick-build=true \
+            -Dnative.image.enable-sbom=true \
+            -Dnative.image.compiler.quick-build=true \
+            -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native"
         shell: bash
+
 
       - name: Copy Binary (Unix)
         if: runner.os != 'Windows'
@@ -135,14 +147,13 @@ jobs:
         with:
           path: ./artifacts
 
-      - name: Determine version
+      - name: Fetch tags
+        run: git fetch --tags
+
+      - name: Determine version from tag
         id: get_version
         run: |
-          if [ "${{ github.event_name }}" == "push" ]; then
-            VERSION=${GITHUB_REF#refs/tags/v}
-          else
-            VERSION=${{ github.event.inputs.version }}
-          fi
+          VERSION=$(git describe --tags --abbrev=0)
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
           echo "VERSION=${VERSION}"
         shell: bash
