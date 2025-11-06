@@ -42,7 +42,7 @@ jobs:
           dependency-caching: true
 
       - name: Build with Maven
-        run: ./mvnw compile -DskipTests=true
+        run: ./mvnw -B -q compile -DskipTests=true
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
