@@ -25,6 +25,8 @@ jobs:
           release-type: maven
           token: ${{ secrets.GITHUB_TOKEN }}
 
+
+
   analyze:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
@@ -224,8 +226,8 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          name: Release ${{ needs.build-native.outputs.version }}
+          tag_name: ${{ needs.build-native.outputs.version }}
           draft: false
           prerelease: false
           generate_release_notes: true
