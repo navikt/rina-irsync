@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.2](https://github.com/navikt/rina-irsync/compare/v1.3.1...v1.3.2) (2025-11-06)
+
+
+### Bug Fixes
+
+* **gha:** only build on PR merge ([bc03c6f](https://github.com/navikt/rina-irsync/commit/bc03c6fe604b46fe65629d48f1fe1b55dc9c884f))
+* **gha:** release binaries again ([3dafc1d](https://github.com/navikt/rina-irsync/commit/3dafc1d593c573fc9bcce104f64e3fbc5af208b7))
+* **gha:** release version ([de5ad04](https://github.com/navikt/rina-irsync/commit/de5ad04008b3c1a39b9fd35777ef6aec467f6bab))
+
 ## [1.3.1](https://github.com/navikt/rina-irsync/compare/v1.3.1-SNAPSHOT...v1.3.1) (2025-10-23)
 
 
