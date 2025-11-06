@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.3](https://github.com/navikt/rina-irsync/compare/v1.3.2...v1.3.3) (2025-11-06)
+
+
+### Bug Fixes
+
+* **gha:** release version from tag ([d9e1c21](https://github.com/navikt/rina-irsync/commit/d9e1c21d0966b2ee5e70e09176cfa1e15199bb36))
+* **gha:** release version from tag ([511e8eb](https://github.com/navikt/rina-irsync/commit/511e8ebfc7de79c878cc11d738517a0c9e2474c3))
+
 ## [1.3.2](https://github.com/navikt/rina-irsync/compare/v1.3.1...v1.3.2) (2025-11-06)
 
 
