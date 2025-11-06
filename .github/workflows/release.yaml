@@ -61,6 +61,8 @@ jobs:
     name: Build Native Image - ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     needs: release-please
+    outputs:
+      version: ${{ steps.get_version.outputs.VERSION }}
     strategy:
       fail-fast: false
       matrix:
