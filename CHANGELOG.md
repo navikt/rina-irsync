@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.4](https://github.com/navikt/rina-irsync/compare/v1.3.3...v1.3.4) (2025-11-06)
+
+
+### Bug Fixes
+
+* **gha:** JDK 25 for codeql job ([3d312f8](https://github.com/navikt/rina-irsync/commit/3d312f830b09e4f53781f886a84ad1a28799d180))
+* **gha:** mvnw codeql job ([a9fba4c](https://github.com/navikt/rina-irsync/commit/a9fba4c7b8261e8bca4411ae2af9f5b29b3504bc))
+* **gha:** mvnw codeql job ([f151ddc](https://github.com/navikt/rina-irsync/commit/f151ddcb225bf1a9cd8e6731163f5b1eb57b1b57))
+* **gha:** oermissions for CodeQL Analysus ([95e2a85](https://github.com/navikt/rina-irsync/commit/95e2a852787178a2aac32327604bff722ef23363))
+* **gha:** oermissions for CodeQL Analysus ([f593267](https://github.com/navikt/rina-irsync/commit/f593267859f42ea6aa875147eb1e42dcf3ac189c))
+* **gha:** release version from tag ([62b858f](https://github.com/navikt/rina-irsync/commit/62b858fa7942d539873144b037760e9d0b83af7a))
+* **gha:** release version tag ([82ef60a](https://github.com/navikt/rina-irsync/commit/82ef60ae0b7346c6df6dbd83c1cc1b08f8524d73))
+
 ## [1.3.3](https://github.com/navikt/rina-irsync/compare/v1.3.2...v1.3.3) (2025-11-06)
 
 
