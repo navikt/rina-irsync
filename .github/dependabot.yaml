@@ -4,6 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    cooldown:
+      default-days: 6
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 4
     commit-message:
       prefix: "chore"
       include: "scope"
