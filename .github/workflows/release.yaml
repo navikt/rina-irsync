@@ -112,15 +112,12 @@ jobs:
             -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native"
         shell: bash
 
-      - name: Determine version
+      - name: Determine version from tag
         id: get_version
         run: |
-         if [ "${{ github.event_name }}" == "push" ]; then
-            VERSION=${GITHUB_REF#refs/tags/v}
-         else
-            VERSION=${{ github.event.inputs.version }}
-         fi
-         echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          VERSION=$(git describe --tags --abbrev=0)
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          echo "VERSION=${VERSION}"
         shell: bash
 
       - name: Copy Binary (Unix)
