@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history and tags
 
       - name: Release Please
         uses: googleapis/release-please-action@v4
@@ -33,6 +35,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history and tags
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
@@ -79,6 +83,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Fetch all history and tags
 
       - name: Cache Maven dependencies
         uses: actions/cache@v3
