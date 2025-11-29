@@ -121,7 +121,7 @@ jobs:
             VERSION=${{ github.event.inputs.version }}
          fi
          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
-         shell: bash
+        shell: bash
 
       - name: Copy Binary (Unix)
         if: runner.os != 'Windows'
