@@ -52,6 +52,9 @@ jobs:
 
       - name: Build with Maven
         run: ./mvnw -B -q compile -DskipTests=true
+        shell: bash
+        env:
+          MAVEN_OPTS: --enable-native-access=ALL-UNNAMED
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
