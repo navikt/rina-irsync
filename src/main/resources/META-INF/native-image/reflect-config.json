@@ -32,5 +32,11 @@
     "name": "no.nav.ten.rina.ir.InitialDocument",
     "allDeclaredConstructors": true,
     "allDeclaredFields": true
+  },
+  {
+    "name": "org.jline.nativ.JLineNativeLoader",
+    "methods": [
+      { "name": "load", "parameterTypes": [] }
+    ]
   }
 ]
