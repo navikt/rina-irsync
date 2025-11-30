@@ -115,7 +115,7 @@ jobs:
             -Dnative.image.quick-build=true \
             -Dnative.image.enable-sbom=true \
             -Dnative.image.compiler.quick-build=true \
-            -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native"
+            -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native --enable-native-access=ALL-UNNAMED"
         shell: bash
 
       - name: Determine version from tag
