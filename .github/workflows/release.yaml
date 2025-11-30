@@ -39,7 +39,7 @@ jobs:
           fetch-depth: 0  # Fetch all history and tags
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@v4
         with:
           languages: java
           dependency-caching: true
@@ -54,7 +54,7 @@ jobs:
         run: ./mvnw -B -q compile -DskipTests=true
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@v4
         with:
           category: "/language:java"
 
