@@ -128,7 +128,6 @@
                         <buildArg>-march=native</buildArg>
                         <buildArg>--strict-image-heap</buildArg>
                         <buildArg>--pgo</buildArg>
-                        <buildArg>--quick-build</buildArg>
                         <buildArg>--enable-sbom</buildArg>
                     </buildArgs>
                 </configuration>

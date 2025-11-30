@@ -111,7 +111,7 @@ jobs:
           ./mvnw -Pnative native:compile \
             -DskipTests=true \
             -Dnative.buildtools.sbom.enabled=true \
-            -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native --enable-native-access=ALL-UNNAMED"
+            -Dnative.image.args="--enable-native-access=ALL-UNNAMED"
         shell: bash
         env:
           MAVEN_OPTS: --enable-native-access=ALL-UNNAMED
