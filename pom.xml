@@ -122,10 +122,9 @@
                 <configuration>
                     <buildArgs>
                         <buildArg>--enable-native-access=ALL-UNNAMED</buildArg>
-                        <!-- <buildArg> -gc=G1</buildArg> Error: Cannot load profile default.iprof (reason: java.io.FileNotFoundException: default.iprof (No such file or directory)). Please verify that the file exists and has appropriate access rights. -->
                         <buildArg>--future-defaults=all</buildArg>
                         <buildArg>-J-Xmx8G</buildArg>
-                        <buildArg>-march=native</buildArg>
+                        <buildArg>-march=x86-64-v2</buildArg>
                         <buildArg>--strict-image-heap</buildArg>
                         <buildArg>--enable-sbom</buildArg>
                     </buildArgs>
