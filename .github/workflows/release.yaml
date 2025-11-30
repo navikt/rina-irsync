@@ -110,7 +110,6 @@ jobs:
         run: |
           ./mvnw -Pnative native:compile \
             -DskipTests=true \
-            -Dnative.buildtools.sbom.enabled=true \
             -Dnative.image.args="--enable-native-access=ALL-UNNAMED"
         shell: bash
         env:
