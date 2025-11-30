@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.6](https://github.com/navikt/rina-irsync/compare/v1.3.5...v1.3.6) (2025-11-30)
+
+
+### Bug Fixes
+
+* **dependencies:** dependabot cooldown ([7ac3e99](https://github.com/navikt/rina-irsync/commit/7ac3e99ffb7f2b832eeb04bab28b5614ce37d63f))
+* **gha:** bump codeql-action to v4 ([eb9ec8c](https://github.com/navikt/rina-irsync/commit/eb9ec8cff8096cb75f5ead55780eb7cab5205573))
+* **gha:** release-please working ([f123c7b](https://github.com/navikt/rina-irsync/commit/f123c7b6cd2df2442cd62f4f7c1bb960ed44e27a)), closes [#10](https://github.com/navikt/rina-irsync/issues/10)
+* **java:** enable native access ([91813a5](https://github.com/navikt/rina-irsync/commit/91813a561f58988b67e58e5134f13391b9eb637e))
+* **java:** enable native access ([d427988](https://github.com/navikt/rina-irsync/commit/d42798845d942e2391e32869b03be1fd60e0d7fc))
+
 ## [1.3.5](https://github.com/navikt/rina-irsync/compare/v1.3.4...v1.3.5) (2025-11-29)
 
 
