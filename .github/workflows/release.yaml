@@ -117,6 +117,8 @@ jobs:
             -Dnative.image.compiler.quick-build=true \
             -Dnative.image.args="--gc=G1 --pgo --future-defaults=all -J-Xmx8G -march=native --enable-native-access=ALL-UNNAMED"
         shell: bash
+        env:
+          MAVEN_OPTS: --enable-native-access=ALL-UNNAMED
 
       - name: Determine version from tag
         id: get_version
