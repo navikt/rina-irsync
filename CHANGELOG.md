@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.7](https://github.com/navikt/rina-irsync/compare/v1.3.6...v1.3.7) (2025-11-30)
+
+
+### Bug Fixes
+
+* **maven:** all access in build with maven ([940eab7](https://github.com/navikt/rina-irsync/commit/940eab7052c258ca5fcb5b17ed78b8fed77743f3))
+* **native:** Native Intel ([1894294](https://github.com/navikt/rina-irsync/commit/18942946077c9e2000848995e99851c9e12e88bd))
+* **native:** native maven plugin ([daa2c0c](https://github.com/navikt/rina-irsync/commit/daa2c0ce98f046f2454bb31a4b5725005e06bb38))
+* **native:** native maven plugin ([220fbf0](https://github.com/navikt/rina-irsync/commit/220fbf0ba474c9af5d595a45c651a3d8a6f9f6f7))
+* **native:** native maven plugin ([ed28e36](https://github.com/navikt/rina-irsync/commit/ed28e36c8906377f451434c00f8e745d9c878d40))
+* **native:** The G1 garbage collector ('--gc=G1') is currently only supported on Linux AMD64 and AArch64. ([c73f748](https://github.com/navikt/rina-irsync/commit/c73f74894564775d9b94f0cc316b4956c4bde27d))
+
 ## [1.3.6](https://github.com/navikt/rina-irsync/compare/v1.3.5...v1.3.6) (2025-11-30)
 
 
