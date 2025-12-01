@@ -10,6 +10,17 @@
           ]
         }
       ]
+    },
+    {
+      "type": "no.nav.ten.rina.ir.InitialDocument",
+      "methods": [
+        {
+          "name": "setSyn002",
+          "parameterTypes": [
+            "no.nav.ten.rina.ir.Syn002"
+          ]
+        }
+      ]
     }
   ]
 }
