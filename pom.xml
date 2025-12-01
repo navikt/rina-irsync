@@ -125,7 +125,6 @@
                         <buildArg>--future-defaults=all</buildArg>
                         <buildArg>-J-Xmx8G</buildArg>
                         <buildArg>-march=x86-64-v2</buildArg>
-                        <buildArg>--strict-image-heap</buildArg>
                         <buildArg>--enable-sbom</buildArg>
                     </buildArgs>
                 </configuration>

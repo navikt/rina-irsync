@@ -1,0 +1,15 @@
+{
+  "reflection": [
+    {
+      "name": "no.nav.ten.rina.ir.RequestForIRSync",
+      "methods": [
+        {
+          "name": "setCurrentVersion",
+          "parameterTypes": [
+            "java.lang.String"
+          ]
+        }
+      ]
+    }
+  ]
+}
