@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.9</version>
+        <version>4.0.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>no.nav.ten.rina.admin</groupId>
@@ -42,16 +42,18 @@
         <java.version>25</java.version>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
+        <jmolecules.version>2025.0.2</jmolecules.version>
+        <jspecify.version>1.0.0</jspecify.version>
         <spring-shell.version>3.4.1</spring-shell.version>
-        <spring-dotenv.version>5.0.1</spring-dotenv.version>
+        <spring-dotenv.version>5.1.0</spring-dotenv.version>
         <semver4j.version>6.0.0</semver4j.version>
         <jsonschema2pojo.version>1.2.2</jsonschema2pojo.version>
         <lombok.version>1.18.42</lombok.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-restclient</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.shell</groupId>
@@ -59,21 +61,21 @@
         </dependency>
         <dependency>
             <groupId>me.paulschwarz</groupId>
-            <artifactId>springboot3-dotenv</artifactId>
+            <artifactId>springboot4-dotenv</artifactId>
         </dependency>
         <dependency>
             <groupId>org.semver4j</groupId>
             <artifactId>semver4j</artifactId>
             <version>${semver4j.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-        </dependency>
-        <dependency>
+    <!--    <dependency>-->
+    <!--        <groupId>org.springframework</groupId>-->
+    <!--        <artifactId>spring-aspects</artifactId>-->
+    <!--    </dependency>-->
+<!--        <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -115,6 +117,19 @@
                 <version>${spring-dotenv.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jmolecules</groupId>
+                <artifactId>jmolecules-bom</artifactId>
+                <version>${jmolecules.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>${jspecify.version}</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

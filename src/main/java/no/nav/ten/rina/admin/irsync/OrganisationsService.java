@@ -5,9 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import no.nav.ten.rina.admin.irsync.util.Auth;
 import no.nav.ten.rina.resources.Resource;
 import org.semver4j.Semver;
-import org.springframework.retry.annotation.Backoff;
-import org.springframework.retry.annotation.EnableRetry;
-import org.springframework.retry.annotation.Retryable;
+import org.springframework.resilience.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
@@ -17,7 +15,6 @@ import java.util.List;
 import java.util.Objects;
 
 @Slf4j
-@EnableRetry
 @Service
 @AllArgsConstructor
 public class OrganisationsService {
@@ -59,8 +56,8 @@ public class OrganisationsService {
             .orElse(null);
   }
 
-  @Retryable( retryFor = {HttpClientErrorException.class, HttpServerErrorException.class, SocketTimeoutException.class},
-          maxAttempts = 8, backoff = @Backoff(delay = 2345, multiplier = 5), listeners = {"loggingRetryListener"} )
+  @Retryable( includes = {HttpClientErrorException.class, HttpServerErrorException.class, SocketTimeoutException.class},
+          maxRetries = 8, delay = 2345, multiplier = 5 )
   private List<Resource> getOrganisations(ResourceLocation location) {
     return List.of(Objects.requireNonNull(auth.client().get()
             .uri(uriBuilder -> uriBuilder
