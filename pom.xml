@@ -44,7 +44,7 @@
         <maven.compiler.target>25</maven.compiler.target>
         <jmolecules.version>2025.0.2</jmolecules.version>
         <jspecify.version>1.0.0</jspecify.version>
-        <spring-shell.version>3.4.1</spring-shell.version>
+        <spring-shell.version>4.0.0</spring-shell.version>
         <spring-dotenv.version>5.1.0</spring-dotenv.version>
         <semver4j.version>6.0.0</semver4j.version>
         <jsonschema2pojo.version>1.2.2</jsonschema2pojo.version>
