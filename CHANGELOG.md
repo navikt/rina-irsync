@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.8](https://github.com/navikt/rina-irsync/compare/v1.3.7...v1.3.8) (2026-02-27)
+
+
+### Bug Fixes
+
+* **dotenv:** bump spring-dotenv to 5.0.1 ([8eac174](https://github.com/navikt/rina-irsync/commit/8eac17482033cc21c457c8d6d2196bab5ccbda6e))
+* **native:** reachability-metadata.json added ([2c0efaf](https://github.com/navikt/rina-irsync/commit/2c0efaf9de385e7ce131bfeb7ffd522a98a0e4d7))
+* **native:** reachability-metadata.json added ([f4884bf](https://github.com/navikt/rina-irsync/commit/f4884bfa064c0ee0e934f03f8f93cd9de345182c))
+* **native:** reachability-metadata.json added ([14cfbf6](https://github.com/navikt/rina-irsync/commit/14cfbf68c5554c731e84639e7875d3c66a43154c))
+* **native:** reachability-metadata.json added ([51a544b](https://github.com/navikt/rina-irsync/commit/51a544bed7a7f02dbe690ddadf8c7ff7dd499d66))
+* **spring:** bump to spring boot 4.0.1, but not Spring Shell yet ([c858d38](https://github.com/navikt/rina-irsync/commit/c858d38181e1375fa51f3112d6a0608e54c1eefa)), closes [#28](https://github.com/navikt/rina-irsync/issues/28)
+
 ## [1.3.7](https://github.com/navikt/rina-irsync/compare/v1.3.6...v1.3.7) (2025-11-30)
 
 
