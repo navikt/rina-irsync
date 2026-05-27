@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.9](https://github.com/navikt/rina-irsync/compare/v1.3.8...v1.3.9) (2026-05-27)
+
+
+### Documentation
+
+* **readme:** add AI-assisted development disclosure ([cafb574](https://github.com/navikt/rina-irsync/commit/cafb5745aba1f61d1fc02f1b7e8497b11e63cf86))
+
 ## [1.3.8](https://github.com/navikt/rina-irsync/compare/v1.3.7...v1.3.8) (2026-05-27)
 
 
