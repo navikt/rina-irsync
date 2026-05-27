@@ -1,8 +1,18 @@
-## Kotlin
+## Java
 
-- Parameterized SQL queries (`?` or named params), never string concatenation
-- Use Kotest matchers (`shouldBe`) in tests
-- Prefer sealed classes for state modeling
+- Parameterized queries and safe string handling — no format strings with user input
+- Never return `null` where `Optional` is appropriate — flag `orElse(null)` patterns
+- Flag `.get()` on Optional without `.isPresent()` guard
+- Prefer `var` for local variables where the type is obvious from context
+- Use `@AllArgsConstructor` + `private final` for constructor injection (Lombok)
+- Flag mutable fields in `@Service` classes (thread safety risk)
+
+## Conventional Commits
+
+- Commit messages must follow conventional commits format
+- Valid types: `feat`, `fix`, `ci`, `docs`, `refactor`, `test`, `chore`, `build`
+- Breaking changes: use `!` suffix (e.g., `feat!:`) or `BREAKING CHANGE:` footer
+- Flag commits without a type prefix
 
 ## Norwegian text (all `.md` and user-facing strings)
 
@@ -11,9 +21,9 @@
 
 ## Security
 
-- No secrets, tokens, or credentials in code
-- SQL queries must be parameterized
-- GitHub Actions pinned to full SHA with version comment
+- No secrets, tokens, or credentials in code — use `.env` with spring-dotenv
+- Flag any hardcoded URLs containing credentials
+- RestClient calls must go through `Auth.client()` for CAS auth
 
 ## Over-editing
 
