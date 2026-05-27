@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.10](https://github.com/navikt/rina-irsync/compare/v1.3.9...v1.3.10) (2026-05-27)
+
+
+### Documentation
+
+* update Copilot config to reflect actual tech stack ([091a27a](https://github.com/navikt/rina-irsync/commit/091a27a7099c1208adf93f1b2649ff19fbd63aa7))
+
 ## [1.3.9](https://github.com/navikt/rina-irsync/compare/v1.3.8...v1.3.9) (2026-05-27)
 
 
