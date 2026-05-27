@@ -108,7 +108,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          ./mvnw -Pnative native:compile \
+          ./mvnw -B -ntp -Pnative native:compile \
             -DskipTests=true \
             -Dnative.image.args="--enable-native-access=ALL-UNNAMED"
         shell: bash
