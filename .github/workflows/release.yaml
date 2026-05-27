@@ -112,8 +112,6 @@ jobs:
             -DskipTests=true \
             -Dnative.image.args="--enable-native-access=ALL-UNNAMED"
         shell: bash
-        env:
-          MAVEN_OPTS: --enable-native-access=ALL-UNNAMED
 
       - name: Determine version from tag
         id: get_version
