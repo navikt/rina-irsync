@@ -230,37 +230,6 @@
     <profiles>
         <profile>
             <id>native-local</id>
-            <properties>
-                <native.image.march>native</native.image.march>
-            </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>exec-maven-plugin</artifactId>
-                        <version>3.6.2</version>
-                        <executions>
-                            <execution>
-                                <id>sanitize-native-metadata</id>
-                                <phase>prepare-package</phase>
-                                <goals>
-                                    <goal>exec</goal>
-                                </goals>
-                                <configuration>
-                                    <executable>python3</executable>
-                                    <arguments>
-                                        <argument>${project.basedir}/scripts/sanitize_native_metadata.py</argument>
-                                        <argument>${project.build.directory}</argument>
-                                    </arguments>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>native-local-apple-silicon</id>
             <activation>
                 <os>
                     <family>mac</family>
