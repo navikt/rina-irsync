@@ -42,9 +42,11 @@
         <java.version>25</java.version>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
+        <native.image.march>x86-64-v2</native.image.march>
+        <native.image.maxHeap>8G</native.image.maxHeap>
         <jmolecules.version>2025.0.2</jmolecules.version>
         <jspecify.version>1.0.0</jspecify.version>
-        <spring-shell.version>3.4.1</spring-shell.version>
+        <spring-shell.version>3.4.2</spring-shell.version>
         <spring-dotenv.version>5.1.0</spring-dotenv.version>
         <semver4j.version>6.0.0</semver4j.version>
         <jsonschema2pojo.version>1.3.3</jsonschema2pojo.version>
@@ -135,9 +137,8 @@
                 <configuration>
                     <buildArgs>
                         <buildArg>--enable-native-access=ALL-UNNAMED</buildArg>
-                        <buildArg>--future-defaults=all</buildArg>
-                        <buildArg>-J-Xmx8G</buildArg>
-                        <buildArg>-march=x86-64-v2</buildArg>
+                        <buildArg>-J-Xmx${native.image.maxHeap}</buildArg>
+                        <buildArg>-march=${native.image.march}</buildArg>
                         <buildArg>--enable-sbom</buildArg>
                     </buildArgs>
                 </configuration>
@@ -225,5 +226,51 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>native-local</id>
+            <properties>
+                <native.image.march>native</native.image.march>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>3.6.2</version>
+                        <executions>
+                            <execution>
+                                <id>sanitize-native-metadata</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>python3</executable>
+                                    <arguments>
+                                        <argument>${project.basedir}/scripts/sanitize_native_metadata.py</argument>
+                                        <argument>${project.build.directory}</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>native-local-apple-silicon</id>
+            <activation>
+                <os>
+                    <family>mac</family>
+                    <arch>aarch64</arch>
+                </os>
+            </activation>
+            <properties>
+                <native.image.march>native</native.image.march>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
