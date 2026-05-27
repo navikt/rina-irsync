@@ -78,3 +78,7 @@ We only test Windows. If the Ubuntu version does not work, please file an issue.
 
 - [X] [Issue #10] migrate CD to Google's [release-please](https://github.com/googleapis/release-please) action
 - [X] proper semantic release versioning using [Conventional Commits](https://www.conventionalcommits.org)
+
+## AI-Assisted Development
+
+This project is developed with the assistance of AI tools (GitHub Copilot / Claude). AI is used as a productivity aid for code generation, refactoring, and documentation. All AI-generated code is reviewed, tested, and validated by human developers who remain responsible for the final output. Core logic and security-critical code are written and understood by the development team.
