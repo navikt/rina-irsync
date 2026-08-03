@@ -45,7 +45,7 @@
         <native.image.march>x86-64-v2</native.image.march>
         <native.image.maxHeap>8G</native.image.maxHeap>
         <jmolecules.version>2025.0.2</jmolecules.version>
-        <jspecify.version>1.0.0</jspecify.version>
+        <jspecify.version>1.0.1</jspecify.version>
         <spring-shell.version>3.4.2</spring-shell.version>
         <spring-dotenv.version>5.1.0</spring-dotenv.version>
         <semver4j.version>6.0.0</semver4j.version>
